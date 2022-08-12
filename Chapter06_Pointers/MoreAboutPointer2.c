@@ -21,8 +21,8 @@ int main()
     //15 wird in b gespeichert
     *p_e = *p_d + *p_f;
 
-    printf("a: %d\n", a);
-    printf("*p_d: %d\n", *p_d);
-    printf("*p_e: %d\n", *p_e);
-    printf("*p_f: %d\n", *p_f);
+    printf("a: %d\n", a);       //13
+    printf("*p_d: %d\n", *p_d); //15
+    printf("*p_e: %d\n", *p_e); //15
+    printf("*p_f: %d\n", *p_f); //13
 }
