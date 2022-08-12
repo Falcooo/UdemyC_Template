@@ -12,7 +12,7 @@ int main()
 
     //2 * 2 + 3 * 3 = 13
     //13 wird in a gespeichert, da *p_d auf a zeigt (Zeile 9)
-    *p_d = (2 * *p_e) + (3 * *p_f);
+    *p_d = (2 * (*p_e)) + (3 * (*p_f));
 
     p_d = &b; //p_d zeigt auf b
     p_f = &a; //p_f zeigt auf a
