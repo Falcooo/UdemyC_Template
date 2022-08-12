@@ -11,7 +11,6 @@ void do_something(double param_in, double *param_out1, double *param_out2)
 
 int main()
 {
-
     double argument_in = 1.0;
     double argument_out1 = 2.0;
     double argument_out2 = 3.0;
