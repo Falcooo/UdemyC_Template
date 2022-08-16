@@ -32,6 +32,7 @@ int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
     //für jede Zeile wird der dort benötigte Speicher reserviert
     for (unsigned int i = 0; i < num_rows; i++)
     {
+        //für jede Zeile ein eigenständiges Array reservieren
         matrix[i] = creatArray(num_cols, value);
     }
 

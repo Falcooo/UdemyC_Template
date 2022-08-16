@@ -185,3 +185,18 @@ int **freeMatrix(int **p_matrix, unsigned int num_rows)
     p_matrix = NULL;
     return p_matrix;
 }
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        for (unsigned int j = 0; j < num_cols; j++)
+        {
+            p_matrix_transpose[j][i] = p_matrix[i][j];
+        }
+    }
+
+    return p_matrix_transpose;
+}
