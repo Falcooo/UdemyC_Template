@@ -19,5 +19,8 @@ int main()
 
     printf("\n");
     printf("%s\n", name2);
+
+    free(name5);
+    name5 = NULL;
     return 0;
 }
