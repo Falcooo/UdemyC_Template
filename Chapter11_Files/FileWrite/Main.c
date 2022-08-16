@@ -28,7 +28,6 @@ int main()
 
     for (unsigned int i = 0; i < v1.length; i++)
     {
-        //fscanf: Fileobjekt übergeben und Werte einlesen
         fscanf(fp, "%d", &v1.data[i]);
     }
 
@@ -36,8 +35,25 @@ int main()
 
     for (unsigned int i = 0; i < v1.length; i++)
     {
+        v1.data[i] -= 1;
         printf("%d\n", v1.data[i]);
     }
+
+    //Datei öffnen, mit dem Befehlt write (schreiben)
+    FILE *fp_out = fopen(output_filepath, "w");
+
+    if (fp_out == NULL)
+    {
+        return 1;
+    }
+
+    for (unsigned int i = 0; i < v1.length; i++)
+    {
+        //fprintf = Fileobjekt übergeben
+        fprintf(fp_out, "%d\n", v1.data[i]);
+    }
+
+    fclose(fp_out);
 
     freeArray(v1.data);
 
