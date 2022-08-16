@@ -4,6 +4,39 @@
 
 char *join(char *delimiter, char **list)
 {
+    if (delimiter == NULL || list == NULL || list[0] == NULL)
+    {
+        return NULL;
+    }
+
+    size_t delimiter_len = strlen(delimiter);
+    size_t current_input_len = strlen(list[0]);
+
+    char *result = (char *)malloc(current_input_len * sizeof(char));
+
+    if (result == NULL)
+    {
+        return NULL;
+    }
+
+    memset(result, 0, current_input_len);
+
+    int i = 0;
+
+    while (list[i] != NULL)
+    {
+        size_t current_result_len;
+        if (i > 0)
+        {
+            current_result_len = strlen(result);
+        }
+        else
+        {
+            current_result_len = current_input_len;
+        }
+
+        current_input_len = strlen(list[i]);
+    }
 }
 
 int main()
